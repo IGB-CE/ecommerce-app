@@ -5,6 +5,9 @@ import cart from './cart.png'
 import menu from './menu.png'
 import dropdown from './dropdown.png'
 import hero from './hero.jpg'
+import exchange_icon from './exchange_icon.png'
+import quality_icon from './quality_icon.png'
+import support_icon from './support_icon.png'
 import p_img1_1 from './p_img1_1.jpg'
 import p_img1_2 from './p_img1_2.jpg'
 
@@ -16,6 +19,9 @@ export const assets = {
     menu,
     dropdown,
     hero,
+    exchange_icon,
+    quality_icon,
+    support_icon,
     p_img1_1,
     p_img1_2
 }
