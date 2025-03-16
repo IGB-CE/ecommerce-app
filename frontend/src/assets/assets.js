@@ -49,7 +49,7 @@ import p_img50 from './p_img50.png'
 import p_img51 from './p_img51.png'
 import p_img52 from './p_img52.png'
 
-import logo from './logo.jpg'
+import logo from './logo.png'
 import search_icon from './search_icon.png'
 import profile_icon from './profile_icon.png'
 import cart from './cart.png'
