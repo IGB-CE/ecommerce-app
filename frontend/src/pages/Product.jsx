@@ -82,8 +82,10 @@ const Product = () => {
           <p className='border px-5 py-3 text-sm'>Reviews (122)</p>
         </div>
         <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500'>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore quo maxime labore quod. Accusamus harum quos aliquam pariatur repellendus recusandae minima, consequuntur assumenda illum eos accusantium ipsa odit deleniti perferendis!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam ullam suscipit earum sapiente facere officia nemo similique? Voluptatum laborum non, eius ipsa dolore dolorum modi quidem incidunt neque, tenetur temporibus!</p>
+              <p>An e-commerce website is an online platform that facilitates the buying and selling of products or services over the internet
+                It serves as a virtual marketplace where businesses and individuals can showcase their products, interact with customers and conduct transactions without
+                the need for a physical presence.
+              </p>
         </div>
       </div>
       {/* Display related products */}

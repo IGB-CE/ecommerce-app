@@ -12,10 +12,11 @@ const About = () => {
       <div className='my-10 flex flex-col md:flex-row gap-16'>
         <img className='w-full md:max-w-[450px]' src={assets.about_img} alt="" />
         <div className='flex flex-col justify-center gap-6 md:w-2/4 text-gray-600'>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti repudiandae fugit quam ad nesciunt laudantium nemo eligendi dolores itaque! Accusantium expedita magni repellat esse quod minima fugit obcaecati distinctio similique.</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, tenetur vitae? Aperiam quas id sit eos, quod illo eaque quibusdam. At amet tempora vel eveniet dolores eum asperiores facilis repellat.</p>
+          <p>At Meglit, we believe fashion is more than just clothing—it’s a way to express who you are. Our journey began with a passion for creating stylish, high-quality pieces that make you feel confident and empowered. With a focus on trend-driven designs and timeless essentials, we bring you a collection that blends comfort, elegance, and individuality.</p>
           <b className='text-gray-800'>Our Mission</b>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae doloremque architecto quis maiores, itaque eveniet in cumque aperiam, quo aliquam quas voluptate consequatur minima est laborum nobis. Earum, laudantium? At.</p>
+          <p>We are dedicated to delivering exceptional quality and craftsmanship in every piece. Our team carefully selects premium fabrics and pays attention to every detail to ensure you get the best. Sustainability is also at the heart of what we do, as we strive to make responsible choices that reduce our impact on the planet. From ethical sourcing to eco-friendly packaging, we are committed to making fashion better for you and the world.</p>
+          <b className='text-gray-800'>Join our comunity</b>
+          <p>More than just a brand, we are a community of fashion lovers who celebrate self-expression and creativity. Whether you’re looking for the latest trends or timeless staples, we’re here to help you create a wardrobe that reflects your unique style. Follow us on social media, sign up for our newsletter, and be part of our journey as we continue to redefine fashion, one outfit at a time.</p>
         </div>
       </div>
       <div className='text-xl py-4'>

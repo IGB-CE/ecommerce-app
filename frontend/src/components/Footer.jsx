@@ -8,8 +8,7 @@ const Footer = () => {
             <div>
                 <img src={assets.logo} className='w-32' alt="" />
                 <p className='w-full md:w-2/3 text-gray-600'>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis eveniet illo aliquam officia, a, impedit repellendus cum iste possimus ab quibusdam facilis praesentium, dolorum laboriosam atque facere placeat vero consequatur.
-                </p>
+                At Meglit, we’re dedicated to bringing you the latest in fashion with quality, style, and affordability in mind. From everyday essentials to trend-setting pieces, we believe in creating looks that inspire confidence. Stay connected with us for exclusive updates, special offers, and more. Thank you for being part of our fashion journey!</p>
             </div>
 
             <div>
