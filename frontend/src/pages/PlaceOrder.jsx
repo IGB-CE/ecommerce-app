@@ -33,11 +33,11 @@ const PlaceOrder = () => {
   const onSubmitHandler = async (event) => {
     event.preventDefault()
     try {
-      
+
       let orderItems = []
 
-      for(const items in cartItems){
-        for(const item in cartItems[items]){
+      for (const items in cartItems) {
+        for (const item in cartItems[items]) {
           if (cartItems[items][item] > 0) {
             const itemInfo = structuredClone(products.find(product => product._id === items))
             if (itemInfo) {
@@ -48,7 +48,7 @@ const PlaceOrder = () => {
           }
         }
       }
-      
+
       let orderData = {
         address: formData,
         items: orderItems,
@@ -58,21 +58,33 @@ const PlaceOrder = () => {
       switch (method) {
         // API calls for COD
         case 'cod':
-          const response = await axios.post(backendURL + '/api/order/place', orderData, {headers:{token}})
-          
+          const response = await axios.post(backendURL + '/api/order/place', orderData, { headers: { token } })
+
           if (response.data.success) {
             setCartItems({})
             navigate('/orders')
           }
-          else{
+          else {
             toast.error(response.data.message)
           }
           break;
-      
+
+        case 'stripe':
+          const responseStripe = await axios.post(backendURL + '/api/order/stripe', orderData , { headers: { token } })
+          if (responseStripe.data.success) {
+            const { session_url } = responseStripe.data
+            window.location.replace(session_url)
+          } else {
+            console.log(responseStripe);
+            
+            toast.error(responseStripe.data.message)
+          }
+          break;
+
         default:
           break;
       }
-      
+
     } catch (error) {
       console.log(error);
       toast.error(error.message)
@@ -97,7 +109,7 @@ const PlaceOrder = () => {
           <input required onChange={onChangeHandler} name='state' value={formData.state} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='State' />
         </div>
         <div className='flex gap-3'>
-          <input required onChange={onChangeHandler} name='zipcode' value={formData.zipcode  } className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="number" placeholder='Zipcode' />
+          <input required onChange={onChangeHandler} name='zipcode' value={formData.zipcode} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="number" placeholder='Zipcode' />
           <input required onChange={onChangeHandler} name='country' value={formData.country} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='Country' />
         </div>
         <input required onChange={onChangeHandler} name='phone' value={formData.phone} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="number" placeholder='Phone' />
